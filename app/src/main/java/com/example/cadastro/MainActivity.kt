@@ -4,6 +4,7 @@ import android.app.Activity
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Spinner
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -24,5 +25,20 @@ class MainActivity : AppCompatActivity() {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
         amb.ufSpinner.adapter = adapter
+
+        amb.limparBt.setOnClickListener {
+            amb.inputNameEt.text.clear()
+            amb.inputEmailEt.text.clear()
+            amb.inputEmailEt.text.clear()
+            amb.emailCb.isChecked = false
+            amb.masculinoRb.isChecked = false
+            amb.femininoRb.isChecked = false
+            amb.cidadeEt.text.clear()
+            amb.ufSpinner.setSelection(0)
+        }
+        Toast.makeText(
+            this@MainActivity, "Formulário limpo!",
+            Toast.LENGTH_SHORT
+        ).show()
     }
 }
