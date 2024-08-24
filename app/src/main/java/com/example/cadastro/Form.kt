@@ -1,23 +1,23 @@
 package com.example.cadastro
 
 class Form(
-    var name: String,
-    var phone: String,
+    var nome: String,
+    var telefone: String,
     var email: String,
-    var isSubscribedToEmailList: Boolean,
-    var gender: String,
-    var city: String,
+    var ingressar_na_lista_de_emails: Boolean,
+    var sexo: String,
+    var cidade: String,
     var uf: String
 ) {
     override fun toString(): String {
         return """
         Dados:
-        Nome: '$name'
-        Telefone: '$phone'
+        Nome: '$nome'
+        Telefone: '$telefone'
         Email: '$email'
-        Inscrito na lista de emails? $isSubscribedToEmailList
-        Sexo: '$gender'
-        Cidade: '$city'
+        Inscrito na lista de emails? $ingressar_na_lista_de_emails
+        Sexo: '$sexo'
+        Cidade: '$cidade'
         UF: '$uf'
         """.trimIndent()
     }
